@@ -54,6 +54,7 @@ button {
   border-radius: 20px;
   background-color: var(--white);
   margin-inline: auto;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, .08)
 }
 
 .qr-code img {
