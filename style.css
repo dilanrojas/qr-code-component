@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+  --ff-html: "Outfit", serif;
+
+  --white: hsl(0, 0%, 100%);
+  --slate-300: hsl(212, 45%, 89%);
+  --slate-500: hsl(216, 15%, 48%);
+  --slate-900: hsl(218, 44%, 22%);
+}
+
+* { margin: 0; padding: 0 }
+
+*, *::before, *::after { box-sizing: border-box}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: var(--ff-html);
+  color: var(--slate-900)
+}
+
+p { color: var(--slate-500) }
+
+body {
+  background-color: var(--slate-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+}
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.2 }
+
+ul, ol { list-style: none }
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  font-weight: inherit;
+  font-family: inherit;
+  font-size: inherit
+}
+
+/* Contents */
+.qr-code {
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: var(--white);
+  margin-inline: auto;
+}
+
+.qr-code img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px
+}
+
+.qr-code-content {
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+/* Utility classes */
+.wrapper {
+  --width: var(--custom-width, 350px);
+  --padding: var(--custom-padding, 1.5rem);
+
+  width: min(var(--width), 100% - var(--padding) * 2);
+  height: min(544px, 100dvh - var(--padding) * 2);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  margin-inline: auto;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1rem)
+}
